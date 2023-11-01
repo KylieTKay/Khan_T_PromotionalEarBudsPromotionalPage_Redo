@@ -1,0 +1,22 @@
+<model-viewer src="EarBuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.12" environment-image="background_con.HDR" tone-mapping="commerce" exposure="1.08" shadow-softness="0.49" camera-orbit="183.1deg 78.29deg 2.906m" field-of-view="30deg">
+    <button class="Hotspot" slot="hotspot-1" data-position="0.603032123003303m -0.24975011714115047m 0.06357517670302135m" data-normal="0.6834430616714182m 0.4059160986856592m 0.6067435226527038m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">BATTERY</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.49483547228902924m -0.31665875868651394m 0.04760160954155848m" data-normal="-0.557078107742892m -0.3352948054786661m 0.7597640260585007m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">SPEAKER</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="0.9298369154647259m 0.151924544864439m -0.13066413081661118m" data-normal="0.247445759792594m 0.0718119079371917m -0.9662368476926795m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">BATTERY LIGHT</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="0.8018533031436503m -0.563854049167996m -0.006937936413206031m" data-normal="-0.10555510469198227m -0.22352359343441372m -0.9689661103731294m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">VOLUME CONTROL</div>
+    </button><button class="Hotspot" slot="hotspot-6" data-position="0.5775842868042984m -0.25904556492162545m -0.051950752596740146m" data-normal="0.5392853397984054m 0.4117485402165296m -0.7345981635616002m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">MULTI-FUNCTION SURFACE</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

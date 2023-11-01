@@ -1,0 +1,32 @@
+
+ svg {
+   display:none;
+   position:relative;
+   display: block;
+   margin: 20px auto;
+   width:700px;
+   max-height: 70vh;
+ }
+ 
+ .LogoHotSpot{
+   visibility: hidden;
+   position: absolute;
+   top: 0px;
+ }
+ 
+.circle2{
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+}
+ /* #circle:hover{
+
+ } */
+
+ #play {
+   position:relative;
+   display:block;
+   width:100px;
+   margin:20px auto;
+   padding:10px;
+ }
