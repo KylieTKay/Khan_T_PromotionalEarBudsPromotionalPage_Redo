@@ -10,12 +10,27 @@
   
   // Customize our own hotspot
   .Hotspot {
-    background: url(../images/hotspot.svg) center no-repeat;
+    // background: url(../images/hotspot.svg) center no-repeat;
     border: 0px;
     width: 45px;
     height: 38px;
     display: none;
     transition: all 1s ease-in-out;
+  }
+
+  svg {
+    // display:none;
+    position:relative;
+    display: block;
+    // margin: 20px auto;
+    width:70px;
+    max-height: 7vh;
+  }
+  
+  .cls-1{
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
   }
 
   .Hotspot:not([data-visible]) {

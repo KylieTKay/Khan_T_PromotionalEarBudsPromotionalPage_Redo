@@ -4,12 +4,43 @@
   const model = document.querySelector("#model");
   const hotspots = document.querySelectorAll(".Hotspot");
 
+
   const infoBoxes = [
+    //#blue
     { 
-      title: "Noise-cancelling microphones",
+      title: "BATTERY",
       text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience",
       image: "images/copperinsulation.jpg"
-    }
+    },
+    //#
+    //#red
+    { 
+      title: "SPEAKER",
+      text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience",
+      image: "images/copperinsulation.jpg"
+    },
+    //#
+      //#yellow
+      { 
+        title: "BATTERY LIGHT",
+        text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience",
+        image: "images/copperinsulation.jpg"
+      },
+      //#
+          //#green
+    { 
+      title: "VOLUME CONTROL",
+      text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience",
+      image: "images/copperinsulation.jpg"
+    },
+    //#
+        //#white
+        { 
+          title: "MULTI-FUNCTION SURFACE",
+          text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience",
+          image: "images/copperinsulation.jpg"
+        }
+        //#
   ];
 
   //functions
@@ -22,17 +53,19 @@
 
   function loadInfo() {
     infoBoxes.forEach((infoBox, index)=>{
+
+      
     let selected = document.querySelector(`#hotspot-${index+1}`);
-       //document.createElement('h2');
-       //.textContent = infoBox.title
-      //document.createElement('p');
-      //.textContent = infoBox.text;
+       h2 = document.createElement('h2');
+       h2.textContent = infoBox.title
+      p = document.createElement('p');
+      p.textContent = infoBox.text;
       console.log(selected);
       console.log(infoBox.title);
       console.log(infoBox.text);
 
-      //selected.appendChild();
-      //selected.appendChild();
+      selected.appendChild(h2);
+      selected.appendChild(p);
 
     })  
   }
@@ -42,14 +75,35 @@
     //console.log(this.slot);
     //console.log(`#${this.slot}`);
     //since the slot value matches the id value I can use the slot value as a selector to get to the div I want.
-    let selected = document.querySelector(`#${this.slot}`);
+    let selected = document.querySelector(`#${this.slot}`),
+    circle = document.querySelector(".st1"),
+    logo = document.querySelector(".cls-1");
+    const logoPathData = logo.getAttribute("d");
+    logo.setAttribute("d", logoPathData);
+
+    var tl = new TimelineMax({Delay:0.3});
+    // MorphSVGPlugin.convertToPath("circle");
+
+    // tl.play(circle);
+    tl.to(circle, .6, {morphSVG:logoPathData});
     gsap.to(selected, 1, { autoAlpha: 1 });
   }
 
   function hideInfo() {
-    //console.log(this.slot);
-    //console.log(`#${this.slot}`);
-    let selected = document.querySelector(`#${this.slot}`);
+    // console.log(this.slot);
+    // console.log(`#${this.slot}`);
+    let selected = document.querySelectorAll(`#${this.slot}`),
+    circle = document.querySelector(".st1");
+    const originalPathData = circle.getAttribute("data-original");
+    circle.setAttribute("data-original", originalPathData);
+
+
+    var tl2 = new TimelineMax({Delay:0.3});
+    tl2.to(circle, .6, {morphSVG:originalPathData});
+    // tl.seek(0);
+    // tl.pause();
+    
+ 
     gsap.to(selected, 1, { autoAlpha: 0 });
   }
 
@@ -60,6 +114,6 @@
     hotspot.addEventListener("mouseover", showInfo);
     hotspot.addEventListener("mouseout", hideInfo);
   });
-})();
 
-// In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
+
+})();
