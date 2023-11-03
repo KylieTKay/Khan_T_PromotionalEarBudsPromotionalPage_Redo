@@ -9,38 +9,50 @@
   }
   
   // Customize our own hotspot
-  .Hotspot {
-    // background: url(../images/hotspot.svg) center no-repeat;
-    border: 0px;
-    width: 45px;
-    height: 38px;
-    display: none;
-    transition: all 1s ease-in-out;
+  
+  svg {
+    float: left;
+    display: block;
+    position: relative;
+    z-index: 2;
   }
 
-  svg {
-    // display:none;
-    position:relative;
-    display: block;
-    // margin: 20px auto;
-    width:70px;
-    max-height: 7vh;
+.Hotspot {
+    background: transparent;
+    scale: 70%;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-direction: row;
+    transition: all 1s ease-in-out;
   }
-  
-  .cls-1{
-    visibility: hidden;
-    position: absolute;
-    top: 0px;
+  .Hotspot:hover {
+    position: relative;
+    scale: 90%;
+    width: 150px;
+    height: 50px;
   }
+
 
   .Hotspot:not([data-visible]) {
     opacity: 0;
     pointer-events: none;
   }
+  // .hotspotHover{
+  //   background: rgba(255, 255, 255, 0);
+  // }
+
+  // .hotspotHover:hover{
+  //   color: black;
+  //   background: rgba(255, 255, 255, 0.43);
+  // }
+
 
   .HotspotAnnotation{
+    background-color: rgba(255, 255, 255, 0.43);
     visibility: hidden;
-    background: #fff;
+    position: relative;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.8);
@@ -48,23 +60,23 @@
     font-family: Futura, Helvetica Neue, sans-serif;
     font-size: 18px;
     font-weight: 700;
-    left: calc(100% + 1em);
     max-width: 300px;
     overflow-wrap: break-word;
     padding: 0.5em 1em;
-    position: absolute;
-    top: 50%;
     width: max-content;
     text-align: left;
+    z-index: 1;
   }
 
   .HotspotAnnotation p {
+        // background-color: rgba(255, 255, 255, 0.43);
     color: #333;
     line-height: 22px;
     font-weight: 300;
   }
 
   .HotspotAnnotation h2 {
+        // background-color: rgba(255, 255, 255, 0.43);
     font-size: 18px;
     margin-bottom: 5px;
   }
