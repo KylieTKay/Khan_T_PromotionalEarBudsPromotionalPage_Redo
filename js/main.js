@@ -12,6 +12,7 @@
 ];
 
 const hotspotHovers = document.querySelectorAll(".hotspotHover");
+
 const allMorphingPaths = [];
   const infoBoxes = [
     //#blue
@@ -85,16 +86,11 @@ const allMorphingPaths = [];
   loadInfo();
 
   function showInfo() {
-    //console.log(this.slot);
-    //console.log(`#${this.slot}`);
-    //since the slot value matches the id value I can use the slot value as a selector to get to the div I want.
     let selected = document.querySelector(`#${this.slot}`);
     gsap.to(selected, 1, { autoAlpha: 1 });
   }
 
   function hideInfo() {
-    // console.log(this.slot);
-    // console.log(`#${this.slot}`);
     let selected = document.querySelectorAll(`#${this.slot}`);
 
     gsap.to(selected, 1, { autoAlpha: 0 });
@@ -102,6 +98,7 @@ const allMorphingPaths = [];
 
   //Event Listener
   model.addEventListener("load", modelLoaded);
+  
   hotspotHovers.forEach(hotspotHover => {
     const morphingPaths = hotspotHover.querySelectorAll(".morphingPath");
     allMorphingPaths.push(morphingPaths);
