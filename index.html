@@ -2,103 +2,164 @@
 <html lang="en">
   <head>
     <title>Novo EarBuds</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/main.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/main.css" rel="stylesheet" />
     <!-- link to greensock main library and scroll plugin -->
   </head>
   <body>
-    <model-viewer id="model" src="model/EarBuds.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/EarBuds.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1.12" environment-image="images/aircraft_workshop_01_1k.hdr" tone-mapping="commerce" exposure="1.08" shadow-softness="0.49" camera-orbit="183.1deg 78.29deg 2.906m" field-of-view="30deg">
+    <!-- <model-viewer id="model" src="model/EarBuds.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/EarBuds.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1.12" environment-image="images/aircraft_workshop_01_1k.hdr" tone-mapping="commerce" exposure="1.08" shadow-softness="0.49" camera-orbit="183.1deg 78.29deg 2.906m" field-of-view="30deg"> -->
 
+    <model-viewer
+      id="model"
+      src="model/earbuds.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      tone-mapping="neutral"
+      poster="images/poster.webp"
+      shadow-intensity="0.82"
+      environment-image="images/tempImageqm1QLw.jpg"
+      exposure="1.12"
+      shadow-softness="0.36"
+      camera-orbit="183.1deg 78.29deg 2.906m"
+      field-of-view="30deg"
+    >
       <!-- in this version, I have manually added, id="hotspot-1, id="hotspot-2", id="hotspot-3", id="hotspot-4"" -->
 
-      <button class="Hotspot" slot="hotspot-1" data-position="0.603032123003303m -0.24975011714115047m 0.06357517670302135m" data-normal="0.6834430616714182m 0.4059160986856592m 0.6067435226527038m" data-visibility-attribute="visible">
-    <div class="hotspotHover">
-    <svg width="fit-content" height="70" xmlns="http://www.w3.org/2000/svg">
-      <path
-        class="morphingPath st1"
-        d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-        fill="black"
-        stroke="black"
-      />
-    </svg>
-        <div class="HotspotAnnotation" id="hotspot-1">
-        </div>
-      </div>
-      </button>
-      
-      <button class="Hotspot" slot="hotspot-2" data-position="0.49483547228902924m -0.31665875868651394m 0.04760160954155848m" data-normal="-0.557078107742892m -0.3352948054786661m 0.7597640260585007m" data-visibility-attribute="visible">
-    <div class="hotspotHover">
-    <svg width="fit-content" height="70" xmlns="http://www.w3.org/2000/svg">
-      <path
-        class="morphingPath st1"
-        d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-        fill="black"
-        stroke="black"
-      />
-    </svg>
-        <div class="HotspotAnnotation" id="hotspot-2"></div>      
-      </div>
-        
-
-    </button>
-      
-    <button class="Hotspot" slot="hotspot-3" data-position="0.9298369154647259m 0.151924544864439m -0.13066413081661118m" data-normal="0.247445759792594m 0.0718119079371917m -0.9662368476926795m" data-visibility-attribute="visible">
-          <div class="hotspotHover">
-    <svg width="fit-content" height="70" xmlns="http://www.w3.org/2000/svg">
-      <path
-        class="morphingPath st1"
-        d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-        fill="black"
-        stroke="black"
-      />
-    </svg>
-      <div class="HotspotAnnotation" id="hotspot-3"></div>
-    </div>
-      
-  </button>
-      
-  <button class="Hotspot" slot="hotspot-4" data-position="0.8018533031436503m -0.563854049167996m -0.006937936413206031m" data-normal="-0.10555510469198227m -0.22352359343441372m -0.9689661103731294m" data-visibility-attribute="visible">
+      <button
+        class="Hotspot"
+        slot="hotspot-1"
+        data-position="-0.07646429204132034m 0.2822934083476907m 0.07568658599207628m"
+        data-normal="-0.34376193857176274m 0.7853683865236804m 0.5148050378916029m"
+        data-visibility-attribute="visible"
+      >
         <div class="hotspotHover">
-    <svg width="fit-content" height="70" xmlns="http://www.w3.org/2000/svg">
-      <path
-        class="morphingPath st1"
-        d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-        fill="black"
-        stroke="black"
-      />
-    </svg>
-      <div class="HotspotAnnotation" id="hotspot-4"></div>
-    </div>
-    
-    
-</button>
-
-<button class="Hotspot" slot="hotspot-5" data-position="0.5775842868042984m -0.25904556492162545m -0.051950752596740146m" data-normal="0.5392853397984054m 0.4117485402165296m -0.7345981635616002m" data-visibility-attribute="visible">
-      <div class="hotspotHover">
-    <svg width="fit-content" height="70" xmlns="http://www.w3.org/2000/svg">
-      <path
-        class="morphingPath st1"
-        d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-        fill="black"
-        stroke="black"
-      />
-    </svg>
-    <div class="HotspotAnnotation" id="hotspot-5"></div>
-      </div>
-  
-</button>
-      <button slot="ar-button" id="ar-button">
-          View in your space
+          <svg
+            width="fit-content"
+            height="70"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="morphingPath st1"
+              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+              fill="black"
+              stroke="black"
+            />
+          </svg>
+          <div class="HotspotAnnotation" id="hotspot-1"></div>
+        </div>
       </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="0.03738430091741714m 0.16629847961439015m 0.08206653601947955m"
+        data-normal="0.584299773188322m -0.31241756547905175m 0.7489920158668035m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspotHover">
+          <svg
+            width="fit-content"
+            height="70"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="morphingPath st1"
+              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+              fill="black"
+              stroke="black"
+            />
+          </svg>
+          <div class="HotspotAnnotation" id="hotspot-2"></div>
+        </div>
+      </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-3"
+        data-position="0.05974480037757839m -0.21774829469575735m -0.11234999129880492m"
+        data-normal="-0.5429377531832464m 0.058613703692311836m -0.8377249130280167m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspotHover">
+          <svg
+            width="fit-content"
+            height="70"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="morphingPath st1"
+              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+              fill="black"
+              stroke="black"
+            />
+          </svg>
+          <div class="HotspotAnnotation" id="hotspot-3"></div>
+        </div>
+      </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-4"
+        data-position="-0.07402286178153913m 0.2214505283011685m -0.03133264944266152m"
+        data-normal="-0.5898854300616415m 0.31899293593470873m -0.7418077151288918m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspotHover">
+          <svg
+            width="fit-content"
+            height="70"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="morphingPath st1"
+              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+              fill="black"
+              stroke="black"
+            />
+          </svg>
+          <div class="HotspotAnnotation" id="hotspot-4"></div>
+        </div>
+      </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-5"
+        data-position="-0.01709394236416422m 0.21271805003886363m 0.15599487182580016m"
+        data-normal="-0.4933566634032949m 0.4733348408299778m 0.7297625169409755m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspotHover">
+          <svg
+            width="fit-content"
+            height="70"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="morphingPath st1"
+              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+              fill="black"
+              stroke="black"
+            />
+          </svg>
+          <div class="HotspotAnnotation" id="hotspot-5"></div>
+        </div>
+      </button>
+      <button slot="ar-button" id="ar-button">View in your space</button>
       <div id="ar-prompt">
-          <img src="images/ar_hand_prompt.png">
+        <img src="images/ar_hand_prompt.png" />
       </div>
-    </model-viewer>  
+      <div id="HotspotAnnotation"></div>
+    </model-viewer>
     <!-- Loads <model-viewer> for browsers: -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
+    ></script>
     <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
