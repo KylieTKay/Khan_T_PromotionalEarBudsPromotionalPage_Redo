@@ -1,3 +1,6 @@
+// header
+
+// AR Hotspots
 (() => {
   //variables
   const model = document.querySelector("#model");

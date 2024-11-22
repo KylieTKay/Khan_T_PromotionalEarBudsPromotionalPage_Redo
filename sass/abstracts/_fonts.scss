@@ -1,0 +1,32 @@
+@mixin body-light {
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin body-medium {
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin body-medium {
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@mixin para-reg {
+  font-family: "jeanne-moderno", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin para-bold {
+  font-family: "jeanne-moderno", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin header {
+  font-family: "BlackGold", serif;
+  src: url("../font/BlackGold_Personal_use.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
