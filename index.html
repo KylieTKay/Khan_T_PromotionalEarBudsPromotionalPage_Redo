@@ -1,157 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Novo EarBuds</title>
+    <title>KHAN EarBuds</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/grid.css" />
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/wjo1cxu.css" />
     <!-- link to greensock main library and scroll plugin -->
   </head>
   <body>
-    <!-- <model-viewer id="model" src="model/EarBuds.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/EarBuds.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1.12" environment-image="images/aircraft_workshop_01_1k.hdr" tone-mapping="commerce" exposure="1.08" shadow-softness="0.49" camera-orbit="183.1deg 78.29deg 2.906m" field-of-view="30deg"> -->
+    <header class="grid-con">
+      <h3 class="titleLeft l-col-start-1" id="headerTitle">KHAN SOUND</h3>
+      <menu class="l-col-span-7 l-col-end-13" id="mainMenu">
+        <li><a href="">OVERVIEW</a></li>
+        <li><a href="">AR-VIEW</a></li>
+        <li><a href="">X-RAY</a></li>
+        <li><a href="">SPECS</a></li>
+        <li class="btn" id="buyBtn"><a href="">BUY</a></li>
+      </menu>
+    </header>
+    <section class="heroCon" id="heroCon">
+      <img
+        src="images/earbuds_promo6.png"
+        alt="Scroll frame animation"
+        class="scrollAnim"
+        id="scrollAnim"
+      />
+    </section>
 
-    <model-viewer
-      id="model"
-      src="model/earbuds.glb"
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      camera-controls
-      tone-mapping="neutral"
-      poster="images/poster.webp"
-      shadow-intensity="0.82"
-      environment-image="images/tempImageqm1QLw.jpg"
-      exposure="1.12"
-      shadow-softness="0.36"
-      camera-orbit="183.1deg 78.29deg 2.906m"
-      field-of-view="30deg"
-    >
-      <!-- in this version, I have manually added, id="hotspot-1, id="hotspot-2", id="hotspot-3", id="hotspot-4"" -->
-
-      <button
-        class="Hotspot"
-        slot="hotspot-1"
-        data-position="-0.07646429204132034m 0.2822934083476907m 0.07568658599207628m"
-        data-normal="-0.34376193857176274m 0.7853683865236804m 0.5148050378916029m"
-        data-visibility-attribute="visible"
-      >
-        <div class="hotspotHover">
-          <svg
-            width="fit-content"
-            height="70"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="morphingPath st1"
-              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-              fill="black"
-              stroke="black"
-            />
-          </svg>
-          <div class="HotspotAnnotation" id="hotspot-1"></div>
+    <section class="advertCon" id="advertCon">
+      <img
+        src="images/earbud_promo2.png"
+        alt="christmas promo image"
+        class="promoImg"
+        id="promoImg"
+      />
+      <div class="promoTxt" id="promoTxt">
+        <h4>FOR A CHRISTMAS TO REMEMBER</h4>
+        <h2>GIVE THE GIFT OF ELEGANCE</h2>
+        <div class="btn" id="promoBtn">
+          <h4>SHOP NOW</h4>
         </div>
-      </button>
-
-      <button
-        class="Hotspot"
-        slot="hotspot-2"
-        data-position="0.03738430091741714m 0.16629847961439015m 0.08206653601947955m"
-        data-normal="0.584299773188322m -0.31241756547905175m 0.7489920158668035m"
-        data-visibility-attribute="visible"
-      >
-        <div class="hotspotHover">
-          <svg
-            width="fit-content"
-            height="70"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="morphingPath st1"
-              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-              fill="black"
-              stroke="black"
-            />
-          </svg>
-          <div class="HotspotAnnotation" id="hotspot-2"></div>
-        </div>
-      </button>
-
-      <button
-        class="Hotspot"
-        slot="hotspot-3"
-        data-position="0.05974480037757839m -0.21774829469575735m -0.11234999129880492m"
-        data-normal="-0.5429377531832464m 0.058613703692311836m -0.8377249130280167m"
-        data-visibility-attribute="visible"
-      >
-        <div class="hotspotHover">
-          <svg
-            width="fit-content"
-            height="70"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="morphingPath st1"
-              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-              fill="black"
-              stroke="black"
-            />
-          </svg>
-          <div class="HotspotAnnotation" id="hotspot-3"></div>
-        </div>
-      </button>
-
-      <button
-        class="Hotspot"
-        slot="hotspot-4"
-        data-position="-0.07402286178153913m 0.2214505283011685m -0.03133264944266152m"
-        data-normal="-0.5898854300616415m 0.31899293593470873m -0.7418077151288918m"
-        data-visibility-attribute="visible"
-      >
-        <div class="hotspotHover">
-          <svg
-            width="fit-content"
-            height="70"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="morphingPath st1"
-              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-              fill="black"
-              stroke="black"
-            />
-          </svg>
-          <div class="HotspotAnnotation" id="hotspot-4"></div>
-        </div>
-      </button>
-
-      <button
-        class="Hotspot"
-        slot="hotspot-5"
-        data-position="-0.01709394236416422m 0.21271805003886363m 0.15599487182580016m"
-        data-normal="-0.4933566634032949m 0.4733348408299778m 0.7297625169409755m"
-        data-visibility-attribute="visible"
-      >
-        <div class="hotspotHover">
-          <svg
-            width="fit-content"
-            height="70"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="morphingPath st1"
-              d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
-              fill="black"
-              stroke="black"
-            />
-          </svg>
-          <div class="HotspotAnnotation" id="hotspot-5"></div>
-        </div>
-      </button>
-      <button slot="ar-button" id="ar-button">View in your space</button>
-      <div id="ar-prompt">
-        <img src="images/ar_hand_prompt.png" />
       </div>
-      <div id="HotspotAnnotation"></div>
-    </model-viewer>
+    </section>
+    <section class="overviewCon" id="overviewCon">
+      <h3 class="titleCenter">OVERVIEW</h3>
+      <p>
+        Experience the perfect blend of luxury and performance with our
+        gold-inspired earphones. Crafted to deliver crystal-clear audio, they
+        offer an immersive sound experience wrapped in the elegance of fine
+        jewelry. Designed for those who appreciate both beauty and function,
+        these earphones combine superior sound quality with a sleek, stylish
+        look, making them the perfect accessory for everyday wear or a
+        thoughtful gift. Whether you're listening to your favorite playlist or
+        making calls, enjoy an audio experience that's as refined as it is
+        powerful.
+      </p>
+      <img
+        src="images/"
+        alt="overview img"
+        class="overviewImg"
+        id="overviewImg"
+      />
+    </section>
+
+    <!-- <model-viewer id="model" src="model/EarBuds.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/EarBuds.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1.12" environment-image="images/aircraft_workshop_01_1k.hdr" tone-mapping="commerce" exposure="1.08" shadow-softness="0.49" camera-orbit="183.1deg 78.29deg 2.906m" field-of-view="30deg"> -->
+    <section class="viewCon grid-con" id="viewCon">
+      <h3 class="titleLeft l-col-start-1 l-col-end-5">TAKE A CLOSER LOOK</h3>
+      <model-viewer
+        class="l-col-start-1 l-col-end-12"
+        id="model"
+        src="model/earbuds.glb"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        tone-mapping="neutral"
+        poster="images/poster.webp"
+        shadow-intensity="0.82"
+        environment-image="images/tempImageqm1QLw.jpg"
+        exposure="1.12"
+        shadow-softness="0.36"
+        camera-orbit="183.1deg 78.29deg 2.906m"
+        field-of-view="30deg"
+      >
+        <!-- in this version, I have manually added, id="hotspot-1, id="hotspot-2", id="hotspot-3", id="hotspot-4"" -->
+
+        <button
+          class="Hotspot"
+          slot="hotspot-1"
+          data-position="-0.07646429204132034m 0.2822934083476907m 0.07568658599207628m"
+          data-normal="-0.34376193857176274m 0.7853683865236804m 0.5148050378916029m"
+          data-visibility-attribute="visible"
+        >
+          <div class="hotspotHover">
+            <svg
+              width="fit-content"
+              height="70"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="morphingPath st1"
+                d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+                fill="black"
+                stroke="black"
+              />
+            </svg>
+            <div class="HotspotAnnotation" id="hotspot-1"></div>
+          </div>
+        </button>
+
+        <button
+          class="Hotspot"
+          slot="hotspot-2"
+          data-position="0.03738430091741714m 0.16629847961439015m 0.08206653601947955m"
+          data-normal="0.584299773188322m -0.31241756547905175m 0.7489920158668035m"
+          data-visibility-attribute="visible"
+        >
+          <div class="hotspotHover">
+            <svg
+              width="fit-content"
+              height="70"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="morphingPath st1"
+                d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+                fill="black"
+                stroke="black"
+              />
+            </svg>
+            <div class="HotspotAnnotation" id="hotspot-2"></div>
+          </div>
+        </button>
+
+        <button
+          class="Hotspot"
+          slot="hotspot-3"
+          data-position="0.05974480037757839m -0.21774829469575735m -0.11234999129880492m"
+          data-normal="-0.5429377531832464m 0.058613703692311836m -0.8377249130280167m"
+          data-visibility-attribute="visible"
+        >
+          <div class="hotspotHover">
+            <svg
+              width="fit-content"
+              height="70"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="morphingPath st1"
+                d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+                fill="black"
+                stroke="black"
+              />
+            </svg>
+            <div class="HotspotAnnotation" id="hotspot-3"></div>
+          </div>
+        </button>
+
+        <button
+          class="Hotspot"
+          slot="hotspot-4"
+          data-position="-0.07402286178153913m 0.2214505283011685m -0.03133264944266152m"
+          data-normal="-0.5898854300616415m 0.31899293593470873m -0.7418077151288918m"
+          data-visibility-attribute="visible"
+        >
+          <div class="hotspotHover">
+            <svg
+              width="fit-content"
+              height="70"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="morphingPath st1"
+                d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+                fill="black"
+                stroke="black"
+              />
+            </svg>
+            <div class="HotspotAnnotation" id="hotspot-4"></div>
+          </div>
+        </button>
+
+        <button
+          class="Hotspot"
+          slot="hotspot-5"
+          data-position="-0.01709394236416422m 0.21271805003886363m 0.15599487182580016m"
+          data-normal="-0.4933566634032949m 0.4733348408299778m 0.7297625169409755m"
+          data-visibility-attribute="visible"
+        >
+          <div class="hotspotHover">
+            <svg
+              width="fit-content"
+              height="70"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="morphingPath st1"
+                d="M2 20A18 18 0 1 0 38 20A18 18 0 1 0 2 20 z"
+                fill="black"
+                stroke="black"
+              />
+            </svg>
+            <div class="HotspotAnnotation" id="hotspot-5"></div>
+          </div>
+        </button>
+        <button slot="ar-button" id="ar-button">View in your space</button>
+        <div id="ar-prompt">
+          <img src="images/ar_hand_prompt.png" />
+        </div>
+        <div id="HotspotAnnotation"></div>
+      </model-viewer>
+      <div class="btn l-col-start-12 l-col-end-13" id="colorChange">
+        <div class="colorBtn gold"></div>
+        <div class="colorBtn pearl"></div>
+        <div class="colorBtn rose"></div>
+      </div>
+    </section>
+    <section class="specsCon" id="specsCon">
+      <h3 class="titleCenter">SPECIFICATIONS</h3>
+      <div class="grid-con" id="Features">
+        <h4 class="titleCenter col-span-full">FEATURES</h4>
+        <div class="specs col-span-full" id="specs">
+          <div class="spec" id="spec1">
+            <i class="fa specIcon"></i>
+            <h4 class="titleCenter">Premium Sound Quality</h4>
+            <p>
+              Immerse yourself in rich, crystal-clear audio with balanced bass,
+              mids, and highs, delivering an exceptional listening experience.
+            </p>
+          </div>
+          <div class="spec" id="spec2">
+            <i class="fa specIcon"></i>
+            <h4 class="titleCenter">All-Day Comfort and Connectivity</h4>
+            <p>
+              Lightweight design with ergonomic ear tips and Bluetooth 5.3 for a
+              stable, hassle-free connection and up to 10 hours of playtime.
+            </p>
+          </div>
+          <div class="spec" id="spec3">
+            <i class="fa specIcon"></i>
+            <h4 class="titleCenter">Precision-Tuned Drivers</h4>
+            <p>
+              Engineered with advanced acoustic technology to deliver immersive
+              sound clarity and deep, resonant bass, wrapped in a sleek,
+              gold-toned design.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-con" id="Materials">
+        <h4 class="titleLeft col-span-full">MATERIALS</h4>
+        <img
+          src="images/"
+          alt="Material Image"
+          class="l-col-start-1 l-col-end-5"
+          id="meterialImg"
+        />
+        <p class="l-col-start-5 l-col-end-13" id="materialPara">
+          We chose 24k gold-plated silver for the exterior to balance luxury,
+          durability, and performance. The 24k gold plating offers a rich,
+          vibrant finish that exudes elegance, while the silver base ensures a
+          lightweight yet robust structure. This combination not only enhances
+          the aesthetic appeal but also provides excellent resistance to
+          tarnishing, maintaining its stunning look over time. Additionally, the
+          use of precious metals complements the premium audio quality, creating
+          a product that is as visually striking as it is acoustically superior.
+        </p>
+      </div>
+    </section>
+    <section class="purchaseCon grid-con" id="purchaseCon">
+      <h3 class="titleLeft col-span-full">ORDER TODAY</h3>
+      <div class="l-col-start-1 l-col-end-7" id="orderImgs">
+        <img src="images/" alt="promo image" class="mainImg" id="mainImg" /><img
+          src="images/"
+          alt="promo image"
+          class="secondaryImgs"
+          id="img1"
+        /><img
+          src="images/"
+          alt="promo image"
+          class="secondaryImgs"
+          id="img2"
+        />
+      </div>
+      <div class="l-col-start-7 l-col-end-13" id="orderText">
+        <h2 class="titleLeft">OPUS</h2>
+        <h4 class="titleLeft">CAD170.90</h4>
+        <ul>
+          <li>
+            <i class="fa details"></i>
+            <p2> 45-Day Risk-Free Trial and Free Shipping </p2>
+          </li>
+          <li>
+            <i class="fa details"></i>
+            <p2> DualPitch Technology for Premium Sound Quality </p2>
+          </li>
+          <li>
+            <i class="fa details"></i>
+            <p2>
+              Reduced Vibrations. Enjoy Music without Any Tactile Feedback
+            </p2>
+          </li>
+          <li>
+            <i class="fa details"></i>
+            <p2> Up to 12-Hour Battery Life and Quick Charge </p2>
+          </li>
+        </ul>
+        <h4 class="titleLeft">COLOURS</h4>
+        <div class="btn">
+          <div class="colorBtn gold">
+            <h4>GOLD</h4>
+          </div>
+        </div>
+        <div class="btn">
+          <h4>ADD TO CART</h4>
+        </div>
+      </div>
+    </section>
+
     <!-- Loads <model-viewer> for browsers: -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script

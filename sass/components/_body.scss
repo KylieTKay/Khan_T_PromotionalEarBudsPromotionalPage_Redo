@@ -1,0 +1,62 @@
+@use "../abstracts" as a;
+
+li::marker {
+  content: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+}
+
+.btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  border-radius: 50rem;
+  box-shadow: 2px 2px 3px;
+}
+
+.titleCenter {
+  text-align: center;
+  justify-self: center;
+}
+
+.titleLeft {
+  text-align: left;
+  justify-self: start;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @include a.header;
+}
+h1 {
+  font-size: 140px;
+}
+
+h2 {
+  font-size: 120px;
+}
+
+h3 {
+  font-size: 60px;
+}
+
+h4 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 35px;
+  @include a.para-reg;
+}
+
+p2 {
+  font-size: 18px;
+  @include a.body-light;
+}
