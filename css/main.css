@@ -574,6 +574,10 @@ header #mainMenu #buyBtnMobile a {
     background-color: white;
   }
 }
+#explode-view {
+  max-width: 100%;
+}
+
 model-viewer {
   border-radius: 2.5rem;
   height: 70vh;
