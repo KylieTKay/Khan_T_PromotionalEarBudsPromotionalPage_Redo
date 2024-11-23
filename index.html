@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="css/grid.css" />
     <link href="css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/wjo1cxu.css" />
+    <script
+      src="https://kit.fontawesome.com/fe8842756b.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- link to greensock main library and scroll plugin -->
   </head>
   <body>
-    <header class="grid-con">
-      <h3 class="titleLeft l-col-start-1" id="headerTitle">KHAN SOUND</h3>
-      <menu class="l-col-span-7 l-col-end-13" id="mainMenu">
-        <li><a href="">OVERVIEW</a></li>
-        <li><a href="">AR-VIEW</a></li>
-        <li><a href="">X-RAY</a></li>
-        <li><a href="">SPECS</a></li>
-        <li class="btn" id="buyBtn"><a href="">BUY</a></li>
+    <header class="grid-con" id="mainHead">
+      <h3 class="col-span-full l-col-start-1 l-col-end-5" id="headerTitle">
+        KHAN SOUND
+      </h3>
+      <menu class="col-span-full l-col-span-7 l-col-end-13" id="mainMenu">
+        <li><a href="#overviewCon">OVERVIEW</a></li>
+        <li><a href="#viewCon">AR-VIEW</a></li>
+        <li><a href="#specsCon">SPECS</a></li>
+        <li class="btn" id="buyBtn"><a href="#purchaseCon">BUY</a></li>
+        <li id="buyBtnMobile"><a href="">BUY</a></li>
       </menu>
     </header>
     <section class="heroCon" id="heroCon">
@@ -30,46 +36,43 @@
     </section>
 
     <section class="advertCon" id="advertCon">
-      <img
-        src="images/earbud_promo2.png"
-        alt="christmas promo image"
-        class="promoImg"
-        id="promoImg"
-      />
-      <div class="promoTxt" id="promoTxt">
-        <h4>FOR A CHRISTMAS TO REMEMBER</h4>
-        <h2>GIVE THE GIFT OF ELEGANCE</h2>
+      <div class="promoImg expand" id="promoImg"></div>
+      <div class="promoTxt titleCenter expand" id="promoTxt">
+        <h4 id="promoH4">
+          FOR A CHRISTMAS<br />
+          TO REMEMBER
+        </h4>
+        <h2 class="titleCenter" id="promoH2">
+          GIVE THE<br />GIFT OF<br />ELEGANCE
+        </h2>
         <div class="btn" id="promoBtn">
-          <h4>SHOP NOW</h4>
+          <h5>SHOP NOW</h5>
         </div>
       </div>
     </section>
     <section class="overviewCon" id="overviewCon">
       <h3 class="titleCenter">OVERVIEW</h3>
-      <p>
-        Experience the perfect blend of luxury and performance with our
-        gold-inspired earphones. Crafted to deliver crystal-clear audio, they
-        offer an immersive sound experience wrapped in the elegance of fine
-        jewelry. Designed for those who appreciate both beauty and function,
-        these earphones combine superior sound quality with a sleek, stylish
-        look, making them the perfect accessory for everyday wear or a
-        thoughtful gift. Whether you're listening to your favorite playlist or
-        making calls, enjoy an audio experience that's as refined as it is
-        powerful.
-      </p>
-      <img
-        src="images/"
-        alt="overview img"
-        class="overviewImg"
-        id="overviewImg"
-      />
+      <div id="overview">
+        <p>
+          Experience the perfect blend of luxury and performance with our
+          gold-inspired earphones. Crafted to deliver crystal-clear audio, they
+          offer an immersive sound experience wrapped in the elegance of fine
+          jewelry. Designed for those who appreciate both beauty and function,
+          these earphones combine superior sound quality with a sleek, stylish
+          look, making them the perfect accessory for everyday wear or a
+          thoughtful gift. Whether you're listening to your favorite playlist or
+          making calls, enjoy an audio experience that's as refined as it is
+          powerful.
+        </p>
+        <div class="overviewImg" id="overviewImg"></div>
+      </div>
     </section>
 
     <!-- <model-viewer id="model" src="model/EarBuds.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/EarBuds.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1.12" environment-image="images/aircraft_workshop_01_1k.hdr" tone-mapping="commerce" exposure="1.08" shadow-softness="0.49" camera-orbit="183.1deg 78.29deg 2.906m" field-of-view="30deg"> -->
-    <section class="viewCon grid-con" id="viewCon">
-      <h3 class="titleLeft l-col-start-1 l-col-end-5">TAKE A CLOSER LOOK</h3>
+    <section class="grid-con" id="viewCon">
+      <h3 class="titleLeft col-span-full">TAKE A CLOSER LOOK</h3>
       <model-viewer
-        class="l-col-start-1 l-col-end-12"
+        class="col-span-full"
         id="model"
         src="model/earbuds.glb"
         ar
@@ -211,53 +214,49 @@
         </div>
         <div id="HotspotAnnotation"></div>
       </model-viewer>
-      <div class="btn l-col-start-12 l-col-end-13" id="colorChange">
+      <!-- <div class="btn l-col-start-12 l-col-end-13" id="colorChange">
         <div class="colorBtn gold"></div>
         <div class="colorBtn pearl"></div>
         <div class="colorBtn rose"></div>
-      </div>
+      </div> -->
     </section>
     <section class="specsCon" id="specsCon">
       <h3 class="titleCenter">SPECIFICATIONS</h3>
-      <div class="grid-con" id="Features">
-        <h4 class="titleCenter col-span-full">FEATURES</h4>
+      <div class="grid-con expand" id="Features">
+        <h4 class="titleCenter col-span-full specTitle">FEATURES</h4>
         <div class="specs col-span-full" id="specs">
           <div class="spec" id="spec1">
-            <i class="fa specIcon"></i>
-            <h4 class="titleCenter">Premium Sound Quality</h4>
+            <i class="fa fa-solid fa-gem specIcon"></i>
+            <h5 class="titleCenter">Premium Sound Quality</h5>
             <p>
               Immerse yourself in rich, crystal-clear audio with balanced bass,
               mids, and highs, delivering an exceptional listening experience.
             </p>
           </div>
+
           <div class="spec" id="spec2">
-            <i class="fa specIcon"></i>
-            <h4 class="titleCenter">All-Day Comfort and Connectivity</h4>
-            <p>
-              Lightweight design with ergonomic ear tips and Bluetooth 5.3 for a
-              stable, hassle-free connection and up to 10 hours of playtime.
-            </p>
-          </div>
-          <div class="spec" id="spec3">
-            <i class="fa specIcon"></i>
-            <h4 class="titleCenter">Precision-Tuned Drivers</h4>
+            <i class="fa fa-solid fa-sliders specIcon"></i>
+            <h5 class="titleCenter">Precision-Tuned Drivers</h5>
             <p>
               Engineered with advanced acoustic technology to deliver immersive
               sound clarity and deep, resonant bass, wrapped in a sleek,
               gold-toned design.
             </p>
           </div>
+          <div class="spec" id="spec3">
+            <i class="fa fa-solid fa-feather specIcon"></i>
+            <h5 class="titleCenter">All-Day Comfort and Connectivity</h5>
+            <p>
+              Lightweight design with ergonomic ear tips and Bluetooth 5.3 for a
+              stable, hassle-free connection and up to 10 hours of playtime.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="grid-con" id="Materials">
-        <h4 class="titleLeft col-span-full">MATERIALS</h4>
-        <img
-          src="images/"
-          alt="Material Image"
-          class="l-col-start-1 l-col-end-5"
-          id="meterialImg"
-        />
-        <p class="l-col-start-5 l-col-end-13" id="materialPara">
+      <div class="grid-con expand" id="Materials">
+        <h4 class="titleLeft col-span-full specTitle">MATERIALS</h4>
+        <div class="col-span-full l-col-end-5" id="meterialImg"></div>
+        <p class="col-span-full l-col-start-6 l-col-end-13" id="materialPara">
           We chose 24k gold-plated silver for the exterior to balance luxury,
           durability, and performance. The 24k gold plating offers a rich,
           vibrant finish that exudes elegance, while the silver base ensures a
@@ -269,58 +268,93 @@
         </p>
       </div>
     </section>
-    <section class="purchaseCon grid-con" id="purchaseCon">
-      <h3 class="titleLeft col-span-full">ORDER TODAY</h3>
-      <div class="l-col-start-1 l-col-end-7" id="orderImgs">
-        <img src="images/" alt="promo image" class="mainImg" id="mainImg" /><img
-          src="images/"
-          alt="promo image"
-          class="secondaryImgs"
-          id="img1"
-        /><img
-          src="images/"
-          alt="promo image"
-          class="secondaryImgs"
-          id="img2"
-        />
-      </div>
-      <div class="l-col-start-7 l-col-end-13" id="orderText">
-        <h2 class="titleLeft">OPUS</h2>
-        <h4 class="titleLeft">CAD170.90</h4>
-        <ul>
-          <li>
-            <i class="fa details"></i>
-            <p2> 45-Day Risk-Free Trial and Free Shipping </p2>
-          </li>
-          <li>
-            <i class="fa details"></i>
-            <p2> DualPitch Technology for Premium Sound Quality </p2>
-          </li>
-          <li>
-            <i class="fa details"></i>
-            <p2>
-              Reduced Vibrations. Enjoy Music without Any Tactile Feedback
-            </p2>
-          </li>
-          <li>
-            <i class="fa details"></i>
-            <p2> Up to 12-Hour Battery Life and Quick Charge </p2>
-          </li>
-        </ul>
-        <h4 class="titleLeft">COLOURS</h4>
+    <section class="purchaseCon" id="purchaseCon">
+      <h3 class="titleLeft" id="purchTitle">ORDER TODAY</h3>
+      <div id="orderDetails">
+        <div id="orderImgs">
+          <div id="x-rayCon">
+            <div id="comparison-con">
+              <div id="xray">
+                <div id="divisor"></div>
+              </div>
+            </div>
+            <input type="range" id="slider" min="0" max="100" value="50" />
+          </div>
+          <div id="regImgs">
+            <img
+              src="images/earbuds_promo6.png"
+              alt="promo image"
+              class="mainImg"
+              id="mainImg"
+            />
+            <img
+              src="images/earbud_promo3.png"
+              alt="promo image"
+              class="secondaryImgs"
+              id="img1"
+            />
+            <img
+              src="images/earbud_promo4.png"
+              alt="promo image"
+              class="secondaryImgs"
+              id="img2"
+            />
+            <img
+              class="secondaryImgs"
+              id="mobile-tablet-view"
+              src="images/Khan_T_XrayView1.png"
+              alt="xray"
+            />
+          </div>
+        </div>
+        <div id="orderText">
+          <h2 class="titleLeft">OPUS</h2>
+          <h4 class="titleLeft">CAD$70.<span>90</span></h4>
+          <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i
+          ><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i
+          ><i class="fa fa-solid fa-star"></i>
+          <p2> CUSTOMER RATED </p2>
+          <ul>
+            <li>
+              <i class="fa fa-solid fa-calendar-days details"></i>
+              <p2> 45-Day Risk-Free Trial and Free Shipping </p2>
+            </li>
+            <li>
+              <i class="fa fa-solid fa-volume-high details"></i>
+              <p2> DualPitch Technology for Premium Sound Quality </p2>
+            </li>
+            <li>
+              <i class="fa fa-solid fa-ear-listen details"></i>
+              <p2>
+                Reduced Vibrations. Enjoy Music without Any Tactile Feedback
+              </p2>
+            </li>
+            <li>
+              <i class="fa fa-solid fa-battery-full details"></i>
+              <p2> Up to 12-Hour Battery Life and Quick Charge </p2>
+            </li>
+          </ul>
+          <!-- <h4 class="titleLeft">COLOURS</h4>
         <div class="btn">
           <div class="colorBtn gold">
             <h4>GOLD</h4>
           </div>
-        </div>
-        <div class="btn">
-          <h4>ADD TO CART</h4>
+        </div> -->
+          <div class="btn">
+            <h5>ADD TO CART</h5>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Loads <model-viewer> for browsers: -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- our main js file -->
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"

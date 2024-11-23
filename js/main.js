@@ -1,4 +1,42 @@
-// header
+// Nav smooth scroll
+(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
+
+  const navLinks = document.querySelectorAll("#mainHead menu li a");
+
+  function scrollLink(e) {
+    e.preventDefault();
+    console.log(e.currentTarget.hash);
+    let selectedLink = e.currentTarget.hash;
+    gsap.to(window, {
+      duration: 1.5,
+      ease: "back.out(.5)",
+      scrollTo: { y: `${selectedLink}`, offsetY: 120 },
+    });
+  }
+
+  // gsap.to(".expand", {
+  //   ScrollTrigger: {
+  //     trigger: ".expand",
+  //     start: "top center",
+  //     end: "bottom center",
+
+  //     markers: true,
+  //     scrub: 1,
+  //     toggleActions: "start restart none end",
+  //   },
+  //   x: -20,
+  //   // x: -20,
+  //   // tranform: 10,
+  //   ease: "power1.in",
+  //   duration: 2,
+  // });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", scrollLink);
+  });
+})();
 
 // AR Hotspots
 (() => {
@@ -112,4 +150,18 @@
     hotspot.addEventListener("mouseover", showInfo);
     hotspot.addEventListener("mouseout", hideInfo);
   });
+})();
+// X - Ray;
+(() => {
+  const div = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
+  function moveDivisor() {
+    console.log(slider.value);
+
+    //   div.style.width = slider.value + "%";
+    div.style.width = `${slider.value}%`;
+  }
+
+  slider.addEventListener("input", moveDivisor);
 })();

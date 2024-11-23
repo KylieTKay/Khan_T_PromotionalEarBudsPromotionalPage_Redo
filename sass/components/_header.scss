@@ -1,33 +1,71 @@
 @use "../abstracts" as a;
 
 header {
-  min-width: 100vw;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  //   min-width: 100%;
+  padding-top: 3vh;
+  padding-bottom: 0.5vh;
   text-wrap: nowrap;
   align-items: center;
-  box-shadow: 2px 2px 10px 1px;
+  box-shadow: rgba(0, 0, 0, 0.259) 2px 2px 5px 2px;
+  background-color: white;
   #headerTitle {
     color: a.$royal;
+    text-align: center;
   }
   #mainMenu {
     display: flex;
     flex-direction: row;
-    justify-self: flex-end;
+    justify-self: center;
     align-items: center;
     justify-content: space-between;
     li {
-      margin-left: 70px;
+      margin-right: 4vw;
       a {
         color: a.$royal;
         @include a.body-light;
       }
     }
     #buyBtn {
-      background-color: a.$honey;
+      display: none;
+    }
+    #buyBtnMobile {
       a {
-        color: white;
+        color: a.$honey;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    padding-top: 1vh;
+    transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 0.588);
+    #headerTitle {
+      text-align: left;
+    }
+    #mainMenu {
+      justify-self: flex-end;
+      li {
+        margin-right: 6.5vw;
+      }
+      #buyBtn {
+        display: block;
+        background-color: a.$honey;
+        margin-right: 0;
+        a {
+          color: white;
+        }
+      }
+      #buyBtnMobile {
+        display: none;
+      }
+    }
+  }
+  header:hover {
+    background-color: white;
   }
 }
