@@ -6,7 +6,7 @@
   canvas.width = 1920;
   canvas.height = 1080;
 
-  const frameCount = 450; //how many still frames
+  const frameCount = 180; //how many still frames
 
   const images = []; //array to hold images
 
@@ -14,9 +14,9 @@
   for (let i = 0; i < frameCount; i++) {
     const img = new Image();
     // recreating path: images/explode_0001.webp
-    img.src = `images/canvas/explode_${(i + 1)
+    img.src = `images/canvas/earbuds_frames${(i + 1)
       .toString()
-      .padStart(4, "0")}.webp`;
+      .padStart(3, "0")}.png`;
     images.push(img);
   }
   console.table(images);
@@ -27,15 +27,15 @@
   };
 
   gsap.to(buds, {
-    frame: 449,
+    frame: 179,
     snap: "frame",
     scrollTrigger: {
       trigger: "#explode-view",
       pin: true,
-      scrub: 0,
+      scrub: 5,
       // markers: true,
-      start: "top top",
-      end: "bottom top",
+      start: "top 90",
+      end: "bottom 90",
     },
     onUpdate: render,
   });
