@@ -1,3 +1,56 @@
+// canvas
+(() => {
+  const canvas = document.querySelector("#explode-view");
+  const context = canvas.getContext("2d");
+
+  canvas.width = 1920;
+  canvas.height = 1080;
+
+  const frameCount = 450; //how many still frames
+
+  const images = []; //array to hold images
+
+  //fill the array with images and point to the images
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    // recreating path: images/explode_0001.webp
+    img.src = `images/canvas/explode_${(i + 1)
+      .toString()
+      .padStart(4, "0")}.webp`;
+    images.push(img);
+  }
+  console.table(images);
+  // create object buds, have proprty of frames. similar to animation of DOM objects and properties.
+
+  const buds = {
+    frame: 0,
+  };
+
+  gsap.to(buds, {
+    frame: 449,
+    snap: "frame",
+    scrollTrigger: {
+      trigger: "#explode-view",
+      pin: true,
+      scrub: 0,
+      // markers: true,
+      start: "top top",
+      end: "bottom top",
+    },
+    onUpdate: render,
+  });
+
+  images[0].addEventListener("load", render);
+
+  function render() {
+    // console.log(buds.frame);
+    console.log(images[buds.frame]);
+    //   wipe cavas
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[buds.frame], 0, 0);
+  }
+})();
+
 // Nav smooth scroll
 (() => {
   gsap.registerPlugin(ScrollTrigger);
