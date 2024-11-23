@@ -1,0 +1,96 @@
+@use "../abstracts" as a;
+
+#comparison-con {
+  display: none;
+}
+input {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  #mobile-tablet-view {
+    display: none;
+  }
+
+  #comparison-con {
+    display: block;
+  }
+
+  #xray {
+    position: relative;
+    aspect-ratio: 16/9;
+    background-image: url(../images/Khan_T_XrayView1.png);
+    background-size: cover;
+    border-radius: 2.5rem 2.5rem 0 0;
+  }
+
+  #divisor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/Khan_T_XrayView.png);
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    border-right: 3px solid a.$honey;
+    border-radius: 2.5rem 0 0 0;
+  }
+
+  input {
+    display: block;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    bottom: 1%;
+    border-radius: 1rem;
+    left: -0.4%;
+    background-color: a.$pollen;
+    width: 100%;
+  }
+
+  input[type="range"]:focus {
+    outline: none;
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: 5px;
+    width: 98%;
+    background-color: a.$pollen;
+    position: relative;
+    outline: none;
+  }
+
+  input[type="range"]::active {
+    border: none;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: a.$honey;
+    border-radius: 100%;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: a.$honey;
+    border-radius: 100%;
+  }
+
+  input[type="range"]:focus::-webkit-slider-thumb {
+    background: a.$honey;
+  }
+
+  input[type="range"]:focus::-moz-range-thumb {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
